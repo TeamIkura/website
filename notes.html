@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<title>投稿|伊倉町</title>
+	<meta name="author" content="Arrk_YR">
+	<meta charset="UTF-8">
+	<meta name="description" content="伊倉町開発における投稿をまとめました。">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="assets/ikura_logo.png" type="image/x-icon">
+	<meta name="robots" content="noindex,nofollow">
+	<link rel="stylesheet" href="ress_min.css">
+	<link rel="stylesheet" href="style.css">
+	<meta name="format-detection" content="email=no,telephone=no,address=no">
+	<meta prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/website#" />
+	<meta property="og:url" content="https://ikura.work" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="投稿|伊倉町" />
+	<meta property="og:description" content="伊倉町開発における投稿をまとめました。" />
+	<meta property="og:image" content="https://ikura.work/assets/thumb.png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@Arrk_YR" />
+	<meta name="twitter:title" content="投稿|伊倉町">
+	<meta name="twitter:image" content="https://ikura.work/assets/large_thumb.png">
+	<style>
+</style>
+	</head>
+<body>
+	<!-- ここにページ名を入れます↓ -->
+	<section id="menubar" class="menubar">投稿</section>
+	<section class="mainContent">
+		<h1>投稿</h1>
+		<p>
+			最近の投稿から順に参考することができます。
+		</p>
+		<p id="noteViewControler", class="noteViewControler">
+			<span id="noteViewPosition">1件目～20件目を表示中 / 全334件</span><br>
+			<input type="button" value="<<" onclick="notePage('start')">
+			<input type="button" value="<" onclick="notePage(-1)">
+			<input type="button" value=">" onclick="notePage(1)">
+			<input type="button" value=">>" onclick="notePage('end')"><br>
+			<input type="button" value="20件表示" onclick="changeNotePageShowCount(20)">
+			<input type="button" value="50件表示" onclick="changeNotePageShowCount(50)">
+			<input type="button" value="100件表示" onclick="changeNotePageShowCount(100)">
+		</p>
+
+		<section id="notes" class="notes">0,20</section>
+		<section id="footer" class="footer">2023/3/21</section>
+	</section>
+</body>
+<script src="assets/format.js"></script>
+</html>

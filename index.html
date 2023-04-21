@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-	<title>データ編集|伊倉町</title>
+	<title>TOP|伊倉町</title>
 	<meta name="author" content="Arrk_YR">
 	<meta charset="UTF-8">
-	<meta name="description" content="伊倉町WEBのデータをコードを触ることなく編集すべく開発されたツールです。">
+	<meta name="description" content="伊倉町は、1980年代の田舎をテーマに開発を進めるMinecraftサーバーです。">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="assets/ikura_logo.png" type="image/x-icon">
@@ -15,141 +15,34 @@
 	<meta prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/website#" />
 	<meta property="og:url" content="https://ikura.work" />
 	<meta property="og:type" content="article" />
-	<meta property="og:title" content="データ編集|伊倉町" />
-	<meta property="og:description" content="伊倉町WEBのデータをコードを触ることなく編集すべく開発されたツールです。" />
+	<meta property="og:title" content="TOP|伊倉町" />
+	<meta property="og:description" content="伊倉町は、1980年代の田舎をテーマに開発を進めるMinecraftサーバーです。" />
 	<meta property="og:image" content="https://ikura.work/assets/thumb.png" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@Arrk_YR" />
-	<meta name="twitter:title" content="データ編集|伊倉町">
+	<meta name="twitter:title" content="TOP|伊倉町">
 	<meta name="twitter:image" content="https://ikura.work/assets/large_thumb.png">
 	<style>
 </style>
 	</head>
 <body>
-	<section id="menubar" class="menubar">
-		<input type="checkbox" name="cb_isShownMenu" id="isShownMenu" style="display: none;">
-		<div style="align-self: flex-start;">
-			<a href="index.html" class="titleLink">
-				<h1 style="width: 4.5em;">伊倉町</h1>
-			</a>
-			<p class="color_main_500">Ikura Town Developer</p>
-		</div>
-	</section>
+	<!-- ここにページ名を入れます↓ -->
+	<section id="menubar" class="menubar">TOP</section>
 	<section class="mainContent">
-		<h1>メンバー・投稿を編集する</h1>
+		<img src="assets/2021-08-21_18.17.17.png" alt="">
+		<h1>伊倉町とは</h1>
+		<p>
+			伊倉町は、1980年代の田舎をテーマに開発を進めるMinecraftサーバーです。<br>
+			詳しくは<a href="about.html">伊倉町について</a>を参照ください。
+		</p>
 
-		<section id="selectMember">
-			<h2>メンバーを選択してね。アナログ乗っ取りは程々にね。(Step1/3)</h2>
-			<section id="members" class="members"><div style="background-color: lightpink;">データファイルの読み込みに失敗しました。再読み込みするか、それでも呼ばれない場合は開発者にお問い合わせ下さい。</div></section>
-		</section>
-
-		<section id="selectWhatToDo" style="display: none;">
-			<div id="user"></div>
-			<h2>なにをする？(Step2/3)</h2>
-			<section style="display: flex;">
-				<button class="largeBtn" onclick="showUserEditor()">
-					<h3>ユーザーを編集</h3>
-					<p>プロフィール画像、名前、自己紹介、カラーを変更できます。</p>
-				</button>
-				<button class="largeBtn" onclick="showNoteEditor()">
-					<h3>投稿を追加</h3>
-					<p>新しく投稿を作成します。</p>
-				</button>
-			</section>
-			<button class="largeBtn back" style="width: calc(100% - 10px);margin-top: 1em;" onclick="backToSelectMember()">
-				<h3>戻る</h3>
-				<p>←ユーザー選択</p>
-			</button>
-		</section>
-
-		<section id="editUser" style="display: none;">
-			<h2>ユーザーを編集するよ(Step3/3)</h2>
-			<p>ユーザー名・自己紹介欄には&lt;span style=&quot;color:red&quot;&gt;&lt;/span&gt;などといったHTML入力も可能です。</p>
-			<input type="text" class="text imgURLField" id="userAvator" placeholder="プロフィール画像URL。アス比1:1を推奨。" oninput="refreshUserPreview(-1)">
-			<input class="inlineBtn" type="button" value="DBを見る" onclick="referImgURL('userAvator', 'open', event)">
-			<input type="text" class="text" id="userName" placeholder="ユーザー名" style="font-weight: bold;" oninput="refreshUserPreview(-1)">
-			<textarea type="text" class="text" id="userDesc" placeholder="自己紹介を入力します。" rows="4" oninput="refreshUserPreview(-1)"></textarea>
-			<input type="text" class="color" id="userColorA" oninput="refreshUserPreview(1)">
-			<input type="text" class="color" id="userColorB" oninput="refreshUserPreview(1)">
-			<input type="text" class="color" id="userColorC" oninput="refreshUserPreview(1)">
-			<br>
-			<input type="color" class="color" id="colorA" oninput="refreshUserPreview(2)">
-			<input type="color" class="color" id="colorB" oninput="refreshUserPreview(2)">
-			<input type="color" class="color" id="colorC" oninput="refreshUserPreview(2)">
-			<h3>プレビュー</h3>
-			<section id="userPreview"></section>
-			<section class="members">
-				<button class="largeBtn" onclick="saveUserData(0)">
-					<h3>保存＋JSON出力</h3>
-					<p>data.jsonが出力されます。ダウンロードしたら、GitHubのwebsite/assets/にCommitしてね。</p>
-				</button>
-				<button class="largeBtn" onclick="saveUserData(1)">
-					<h3>保存＋編集した部分をコピー</h3>
-					<p>json文字列でクリップボードにコピーします。Discordに直接貼れるコード形式になります。</p>
-				</button>
-			</section>
-			<p id="userStrAlt"></p>
-			<p><a href="https://github.com/TeamIkura/website/tree/main/assets" target="_blank">GitHubリポジトリはこちら(新規タブ)</a></p>
-			<button class="largeBtn back" style="width: calc(100% - 10px);margin-top: 1em;" onclick="backToSelectWhatToDo()">
-				<h3>戻る</h3>
-				<p>←操作を選択する ※保存を押していない場合、変更内容は保存されません！</p>
-			</button>
-		</section>
-
-		<section style="display: none;" id="addNote">
-			<h2>投稿を追加するよ(Step3/3)</h2>
-			<textarea type="text" class="text" id="noteContent" placeholder="本文&#010;&lt;span style=&quot;color:red&quot;&gt;&lt;/span&gt;などといったHTML入力も可能です。" rows="4" oninput="refreshNotePreview(0)"></textarea>
-			<textarea type="text" class="text" id="noteImgs" placeholder="画像URL&#010;改行で区切ることができます。&#010;枚数に制限は設けておりませんが、良識的な範囲でね！！！" rows="4" oninput="refreshNotePreview(0)"></textarea>
-			<input class="inlineBtn" type="button" value="DBを見る" onclick="referImgURL('noteImgs', 'open', event)">
-
-			<h3>プレビュー</h3>
-			<div class="note" id="notePreview"></div>
-			<section class="members">
-				<button class="largeBtn" onclick="saveNote(0)">
-					<h3>保存＋JSON出力</h3>
-					<p>data.jsonが出力されます。ダウンロードしたら、GitHubのwebsite/assets/にCommitしてね。</p>
-				</button>
-				<button class="largeBtn" onclick="saveNote(1)">
-					<h3>保存＋編集した部分をコピー</h3>
-					<p>json文字列でクリップボードにコピーします。Discordに直接貼れるコード形式になります。</p>
-				</button>
-			</section>
-			<p id="noteStrAlt"></p>
-			<p><a href="https://github.com/TeamIkura/website/tree/main/assets" target="_blank">GitHubリポジトリはこちら(新規タブ)</a></p>
-			<button class="largeBtn back" style="width: calc(100% - 10px);margin-top: 1em;" onclick="backToSelectWhatToDo()">
-				<h3>戻る</h3>
-				<p>←操作を選択する ※ 保存を押していない場合、変更内容は保存されません！ ※2 保存して戻った場合、ここでの再編集はできません！</p>
-			</button>
-		</section>
-
-		<section id="referImgContainer" class="referImgContainer" onclick="referImgURL('null', 'choose', event)">
-			<div style="width:calc(100% - 50px);max-width: 800px;margin: 20px auto;padding: 5px;border-radius: 10px;background-color: #fff;" class="referImgContent">
-				<div>
-					<h2 style="width: calc(100% - 220px);display: inline-block;">リポジトリの画像を参照する</h2>
-					<input type="button" class="inlineBtn refreshBtn" value="更新">
-					<input type="button" class="inlineBtn closeBtn" value="閉じる">
-					<p>クリックで画像URLを挿入することができます。</p>
-				</div>
-				<div style="max-height: calc(80vh);overflow-y: auto;padding-bottom: 10px;" id="imageList">
-
-				</div>
-			</div>
-		</section>
-
-		<h2>確認されている不具合</h2>
-		<ul>
-			<li>
-				一度にメンバーを二人以上追加できない
-				<ul>
-					<li>新規メンバーを追加→保存→メンバー選択まで戻る→新規メンバーを追加をすると最初に追加したメンバーが何故か上書きされる
-					</li>
-				</ul>
-			</li>
-		</ul>
+		<h2>最近の投稿</h2>
+		<!-- 変数は最新x+1件目、y件表示 -->
+		<section id="notes">0,3</section>
 		
 		<section id="footer" class="footer">2023/4/22</section>
 
 	</section>
 </body>
-<script src="script.js"></script>
+<script src="assets/format.js"></script>
 </html>

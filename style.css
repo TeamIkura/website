@@ -82,7 +82,7 @@ h1{
 	color: black;
 }
 
-.menubtn{
+/* .menubtn{
 	display: none;
 	margin: 2px;
 	margin-left: auto;
@@ -94,16 +94,16 @@ h1{
 	text-align: center;
 	text-decoration: none;
 	color: white;
-}
+} */
 
-.links a:hover{
+/* .links a:hover{
 	background-color: var(--color-main-200);
 	flex-grow: 2;
-}
+} */
 
-.menubtn:hover{
+/* .menubtn:hover{
 	background-color: var(--color-main-200);
-}
+} */
 
 .mainContent h1{
 	z-index: -1;
@@ -208,6 +208,11 @@ img{
 	margin: 5px;
 	background-color: #b5c2ff22;
 	border-radius: 10px;
+	text-align: start;
+}
+
+.member:hover{
+	filter: opacity(0.75);
 }
 
 .member .icon{
@@ -215,11 +220,93 @@ img{
 	height: min(7em, 25vw);
 	box-shadow: 2px 2px 3px white;
 	border-radius: 10px;
+	object-fit: cover;
 }
 
-.member h3{
+.member h3,
+.largeBtn h3{
 	margin-left: 5px;
 	font-size: 1.5em;
+}
+
+.largeBtn{
+	width: 100%;
+	margin-bottom: 10px;
+	margin: 5px;
+	background: var(--color-main-500);
+	border-radius: 10px;
+	color:white;
+	text-align: start;
+}
+
+.largeBtn:hover{
+	background: var(--color-main-200);
+}
+
+.inlineBtn{
+	background-color: var(--color-main-500);
+	width: 95px;
+	margin-left: 5px;
+	padding: 3px;
+	font-size: 20px;
+	color: white;
+}
+
+.inlineBtn:hover{
+	background-color: var(--color-main-200);
+}
+
+.back{
+	color: var(--color-main-900);
+}
+
+.text{
+	display: inline-block;
+	width: 90%;
+	margin-top: 3px;
+	background-color: var(--color-main-900);
+	padding: 3px;
+	font-size: 20px;
+	transition: none;
+}
+
+.imgURLField{
+	width: calc(90% - 100px);
+}
+
+.referImgContainer{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	left: 0;
+	top: -100vh;
+	opacity: 0;
+	background-color: #0005;
+}
+
+#imageList button{
+	float: left;
+	margin: 5px;
+	width: 150px;
+	height: 150px;
+	border: solid 1px white;
+	border-radius: 10px;
+}
+
+#imageList button img{
+	object-fit: contain;
+}
+
+#imageList button:hover{
+	border: solid 1px var(--color-main-500);
+}
+
+.color{
+	display: inline;
+	width: 29%;
+	margin-top: 3px;
+	background-color: var(--color-main-900);
+	height: 30px;
 }
 
 .footer{
@@ -228,64 +315,6 @@ img{
 	padding: 4em 0 2em;
 	color: white;
 	text-align: center;
-}
-
-
-@media(max-width:580px){
-
-	.menubar{
-		position: fixed;
-		z-index: 1;
-		background: linear-gradient(180deg, #fff8, #fff9 80%, #fff0) ;
-		backdrop-filter: blur(5px);
-		width: 100%;
-		max-height: 90vh;
-		top: 0;
-		padding-bottom: 10px;
-		justify-content: flex-start;
-		flex-wrap: wrap;
-	}
-
-	.menubtn{
-		display: block;
-	}
-
-	.links{
-		overflow-y: hidden;
-		align-items: flex-start;
-		opacity: 0;
-		width: 100%;
-	}
-
-	#isShownMenu:checked ~ .links{
-		top: 90px;
-		margin-right: 10px;
-		display: flex;
-		flex-grow: 2;
-		opacity: 1;
-	}
-
-	.links :is(a, span){
-		padding: 0px 25px;
-		font-size: 0;
-	}
-
-	#isShownMenu:checked ~ .links :is(a, span){
-		padding: 5px 25px;
-		font-size: 20px;
-	}
-
-	#isShownMenu:checked ~ label{
-		background-color: var(--color-main-200);
-	}
-
-	#isShownMenu:checked ~ label:hover{
-		background-color: var(--color-main-500);
-	}
-
-	.mainContent{
-		margin-top: 110px;
-	}
 }
 
 @media(min-width:960px){
@@ -323,9 +352,10 @@ img{
 		width: min(calc(100% - 250px), 1040px);
 	}
 
-	.member{
+	.member,
+	.largeBtn{
 		width: calc(50% - 10px);
-	}	
+	}
 
 	.footer{
 		margin-left: -250px;

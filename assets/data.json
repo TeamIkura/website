@@ -5,34 +5,70 @@
 	],
 	"u": [
 		{
-			"i": 1,
-			"a" : "https://pbs.twimg.com/profile_images/1603669222890295297/ZnXqPYX3_400x400.jpg",
-			"n": "Arrk",
-			"d": "ここに自己紹介をうんにゃらかんにゃら書いていくよう",
-			"c": ["#000080", "#6bf5c8", "#09ca86"]
+			"i": 4,
+			"a": "https://pbs.twimg.com/profile_images/1600149844940627969/Em0yGOai_400x400.jpg",
+			"n": "Cyrus",
+			"d": "伊倉の鯖管だよ。建築と絵はできないよ。じゃあなんで建築鯖の鯖管やってるかって..? 察しのいい子は嫌いだよ。",
+			"c": [
+				"#ffffff",
+				"#4e89ff",
+				"#2f4377"
+			]
 		},
-		{"i":2,"a":"https://cdn.discordapp.com/avatars/959326473100075079/7fed09ae563f5f44348e04f60b864794.webp?size=96","n":"CK","d":"└(┐ﾞ’ωﾞ’ωﾞ`┘)┌モニャフーニャップスッポコホニャーオンンンィイ゛イ゛ェエ゛エ゛ァア゛ッッッッッポォオ゛ォオ゛","c":["#ffffff","#800000","#000000"]},
+		{
+			"i": 1,
+			"a": "https://pbs.twimg.com/media/FpkRZloaQAE8pOA?format=jpg",
+			"n": "Arrk",
+			"d": "普段はMinecraftで架空都市<span style=\"color:#020;font-weight:bold;text-shadow:1px 1px 0px white\">「葉谷市」</span>を開発するなどしている、何の変哲もないそこらへんにいる人類。<br>\n葉谷市開発の一環として、YR葉谷鉄道線の発車案内表示機のコマンドや、トロッコの見た目を変えるリソースパック(CEM含む)を生み出したり、かと思えばデザインやイラスト、HTML/CSS・Java・JSといったプログラミングも多少齧ったりと噛み砕けば多岐に渡る。",
+			"c": [
+				"#000080",
+				"#6bf5c8",
+				"#09ca86"
+			]
+		},
+		{
+			"i": 2,
+			"a": "https://pbs.twimg.com/profile_images/1545773666088415232/wcj5oAnf_400x400.jpg",
+			"n": "CK",
+			"d": "└(┐ﾞ’ωﾞ’ωﾞ`┘)┌モニャフーニャップスッポコホニャーオンンンィイ゛イ゛ェエ゛エ゛ァア゛ッッッッッポォオ゛ォオ゛",
+			"c": [
+				"#ffffff",
+				"#800000",
+				"#000000"
+			]
+		},
 		{
 			"i": 3,
-			"a" : "https://pbs.twimg.com/profile_images/1617388529407098880/GUGrPevV_400x400.jpg",
+			"a": "https://pbs.twimg.com/profile_images/1617388529407098880/GUGrPevV_400x400.jpg",
 			"n": "イングラム国嬢辺",
 			"d": "伸縮性のある！！ぽあああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ！！！！！",
-			"c": ["#ffffff", "#008000", "#000000"]
-		},
+			"c": [
+				"#ffffff",
+				"#008000",
+				"#000000"
+			]
+		}
+	],
+	"n": [
+		{"i":1,"d":"2023-4-22","c":"こっちの話でしかないんだけど、どこかのCMSみたいにディレクトリ内にある画像をこういう投稿とかに簡単に追加出来たら便利だなと思ってやってみたらどうよ？これがGithub pagesにある限り無理っぽいじゃないか！かといってWeb鯖に移設するのを無理強いする訳にはいかないしな、ゆっくり待つしかないか～"},
 		{
 			"i": 4,
-			"a":"https://pbs.twimg.com/profile_images/1600149844940627969/Em0yGOai_400x400.jpg",
-			"n":"Cyrus",
-			"d":"伊倉の鯖管だよ。建築と絵はできないよ。じゃあなんで建築鯖の鯖管やってるかって..? 察しのいい子は嫌いだよ。",
-			"c":["#ffffff","#4e89ff","#2f4377"]}
-		],
-	"n": [
-		{"i":2,"d":"2023-3-26","c":"<span style=\"color:red;font-size:2em;font-weight:bold\">にゃ～ん</span>"},
+			"d": "2023-04-10",
+			"c": "鯖管も大変なんだよ。",
+			"p": []
+		},
+		{
+			"i": 2,
+			"d": "2023-3-26",
+			"c": "<span style=\"color:red;font-size:2em;font-weight:bold\">にゃ～ん</span>"
+		},
 		{
 			"i": 1,
 			"d": "2023-03-21",
 			"c": "<span style=\"color:#ff0000;font-weight:bold;font-size:2em\">投稿機能</span>のテストだよ<br>ｵﾞｱﾞｱﾞｱﾞｱﾞｰｰｰｯ",
-			"p": ["https://pbs.twimg.com/media/Fd0puj5VIAAYRsg?format=jpg&name=small"]
+			"p": [
+				"https://pbs.twimg.com/media/Fd0puj5VIAAYRsg?format=jpg&name=small"
+			]
 		},
 		{
 			"i": 3,
@@ -175,12 +211,6 @@
 			"i": 2,
 			"d": "2023-03-20",
 			"c": "1ぷももえんぐえげぎおんもえちょっちょっちゃっさ",
-			"p": []
-		},
-		{
-			"i": 4,
-			"d": "2023-04-10",
-			"c": "鯖管も大変なんだよ。",
 			"p": []
 		}
 	]
